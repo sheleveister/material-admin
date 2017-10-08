@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WrapperTableComponent implements OnInit {
 
+  public title: string = 'Table';
+  public text: string;
+  public placeholder: string = 'Search term';
+
   constructor() { }
 
   ngOnInit() {

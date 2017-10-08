@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WrapperDashboardComponent implements OnInit {
 
+  public title: string = 'Dashboard';
+  public text: string;
+  public placeholder: string = 'Search term';
+
   constructor() { }
 
   ngOnInit() {

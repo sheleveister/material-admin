@@ -7,10 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherWidgetComponent implements OnInit {
 
-  public text: string;
-  public placeholder: string = 'Search term';
-  public title: string = 'Hot Weather Widget';
-
   public constructor() { }
 
   public ngOnInit() {

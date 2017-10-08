@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.social-info {
+  width: 400px;
+  height: 300px;
+  background-color: $color-yellow;
+  margin: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}

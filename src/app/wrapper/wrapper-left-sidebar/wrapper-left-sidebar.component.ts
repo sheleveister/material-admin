@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WrapperLeftSidebarComponent implements OnInit {
 
+  public title: string = 'Left sidebar';
+  public text: string;
+  public placeholder: string = 'Search term';
+
   constructor() { }
 
   ngOnInit() {

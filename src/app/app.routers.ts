@@ -13,20 +13,24 @@ import { SubMenuNavigateComponent } from './sub-menu-navigate/sub-menu-navigate.
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileCountComponent } from './profile-count/profile-count.component';
 import { ProfileAboutComponent } from './profile-about/profile-about.component';
-import { WeatherWidgetComponent } from './wrapper/weather-widget/weather-widget.component';
+import { WeatherWidgetComponent } from './weather/weather-widget/weather-widget.component';
 import { CardComponent } from './card/card.component';
 import { TooltipDirective } from './common/directives/tooltip.directive';
-import { FilterPipe } from './common/products/filter.pipe';
+import { FilterPipe } from './common/pipes/filter.pipe';
 import { WrapperCardsComponent } from './wrapper/wrapper-cards/wrapper-cards.component';
 import { WrapperDashboardComponent } from './wrapper/wrapper-dashboard/wrapper-dashboard.component';
 import { WrapperFormComponent } from './wrapper/wrapper-form/wrapper-form.component';
 import { WrapperLeftSidebarComponent } from './wrapper/wrapper-left-sidebar/wrapper-left-sidebar.component';
 import { WrapperListComponent } from './wrapper/wrapper-list/wrapper-list.component';
 import { WrapperTableComponent } from './wrapper/wrapper-table/wrapper-table.component';
+import { SafeUrlPipe } from './common/pipes/safe-url.pipe';
+import { SocialInfoComponent } from './weather/social-info/social-info.component';
+import { WeatherListComponent } from './weather/weather-list/weather-list.component';
+import { WrapperWeatherComponent } from './wrapper/wrapper-weather/wrapper-weather.component';
 
 const appRoutes: Routes = [
   { path: '', component: WrapperListComponent },
-  { path: 'weather-widget', component: WeatherWidgetComponent },
+  { path: 'weather-widget', component: WrapperWeatherComponent },
   { path: 'dashboard', component: WrapperDashboardComponent },
   { path: 'cards', component: WrapperCardsComponent },
   { path: 'table', component: WrapperTableComponent },
@@ -49,7 +53,6 @@ const appRoutes: Routes = [
     CardComponent,
     TooltipDirective,
     FilterPipe,
-
     WrapperComponent,
     WrapperCardsComponent,
     WrapperDashboardComponent,
@@ -57,6 +60,10 @@ const appRoutes: Routes = [
     WrapperLeftSidebarComponent,
     WrapperListComponent,
     WrapperTableComponent,
+    SafeUrlPipe,
+    SocialInfoComponent,
+    WeatherListComponent,
+    WrapperWeatherComponent,
   ],
   imports: [
     FormsModule,
@@ -82,7 +89,6 @@ const appRoutes: Routes = [
     CommonModule,
     TooltipDirective,
     FilterPipe,
-
     WrapperComponent,
     WrapperCardsComponent,
     WrapperDashboardComponent,
@@ -90,6 +96,10 @@ const appRoutes: Routes = [
     WrapperLeftSidebarComponent,
     WrapperListComponent,
     WrapperTableComponent,
+    SafeUrlPipe,
+    SocialInfoComponent,
+    WeatherListComponent,
+    WrapperWeatherComponent,
   ],
 })
 

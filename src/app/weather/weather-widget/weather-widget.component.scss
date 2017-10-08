@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.weather-widget {
+  width: 400px;
+  height: 200px;
+  background-color: $color-pink;
+  margin: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
