@@ -1,0 +1,123 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+:host {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $color-menu;
+  position: relative;
+  z-index: 9999;
+}
+
+.menu {
+  @include reset();
+  background-color: white;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 3px $color-shadow;
+  font-size: 15px;
+  color: $color-menu-text;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    &:hover {
+      background-color: $color-menu-hover;
+      cursor: pointer;
+      transition: all .3s ease;
+      .menu__inside {
+        display: block;
+      }
+    }
+  }
+
+  &__list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 0 25px;
+    text-decoration: none;
+    &:hover {
+      background-color: $color-menu-hover;
+      cursor: pointer;
+      transition: $transition;
+    }
+  }
+
+  &__inside {
+    @include reset();
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 56px;
+    width: 200px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: $default-shadow;
+  }
+
+  &__inside-list {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin: 20px 10px;
+    &:hover {
+      background-color: $color-green;
+      transition: $transition;
+      border-radius: 4px;
+      color: white;
+    }
+  }
+
+  &__inside-list-link {
+    text-decoration: none;
+  }
+
+  &__list-dropdown {
+    margin-right: auto;
+  }
+
+  &__search {
+    padding: 0 15px;
+    color: $color-text;
+  }
+
+  &__search--input {
+    outline: none;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid $color-border-input;
+    font-size: 14px;
+    color: $color-text;
+    width: 200px;
+    &[placeholder]::-webkit-input-placeholder {
+      color: $color-text-placeholder;
+    }
+    &[placeholder]::-moz-placeholder {
+      color: $color-text-placeholder;
+    }
+  }
+
+  &__list-link-avatar {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 25px;
+    color: $color-menu-text;
+  }
+
+  &__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+}

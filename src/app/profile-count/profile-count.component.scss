@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.profile-count {
+  display: flex;
+  flex-direction: row;
+  width: 270px;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  background-color: #F5F9FB;
+  border: 1px solid $color-border;
+  border-top: none;
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__post-count {
+    @include text();
+    font-size: 20px;
+  }
+
+  &__post-type {
+    @include text();
+    font-size: 14px;
+  }
+}

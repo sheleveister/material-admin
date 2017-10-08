@@ -1,0 +1,8 @@
+@import '../../styles/variables';
+
+.sub-menu {
+  height: 70px;
+  background-color: $color-green;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,18 @@
+@import 'variables';
+
+@mixin active-sidebar-link() {
+  color: $color-white;
+  background-color: $color-link-hover;
+}
+
+@mixin reset() {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin text() {
+  color: $color-text;
+  line-height: 1.5;
+  letter-spacing: .03em;
+}

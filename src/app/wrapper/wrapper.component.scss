@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+
+:host {
+  display: flex;
+  height: 100vh;
+  width: 80%;
+  flex-direction: column;
+  background-color: $color-wrapper-list;
+  overflow: auto;
+}
