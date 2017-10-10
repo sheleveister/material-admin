@@ -1,4 +1,5 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 :host {
   display: flex;
@@ -6,29 +7,54 @@
 
 .weather-block {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
   width: 500px;
-  padding: 12px;
+  padding: 24px;
   box-sizing: border-box;
 
   &__img {
-    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid $color-purple;
+    overflow: hidden;
   }
 
-  &__img-source {
-    position: absolute;
-    top: 0;
-    left: 0;
+  &__img-picture {
+    position: relative;
+    width: 210%;
+    height: 100%;
   }
+
+}
+
+.weather-contacts {
+  display: flex;
+  flex-direction: column;
 
   &__address {
-    display: flex;
-    flex-direction: row;
+    @include text();
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
   }
 
-  &__type {
-    display: flex;
-    flex-direction: row;
+  &__phone {
+    @include text();
+    font-size: 14px;
+    color: white;
+    padding: 5px 10px;
+    background-color: $color-green;
+    border-radius: 30px;
+    width: 120px;
+    text-align: center;
+    margin: 8px 0;
+  }
+
+  &__title {
+    @include text();
   }
 }

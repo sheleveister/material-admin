@@ -27,6 +27,7 @@ import { SafeUrlPipe } from './common/pipes/safe-url.pipe';
 import { SocialInfoComponent } from './weather/social-info/social-info.component';
 import { WeatherListComponent } from './weather/weather-list/weather-list.component';
 import { WrapperWeatherComponent } from './wrapper/wrapper-weather/wrapper-weather.component';
+import { FilterWeatherPipe } from './common/pipes/filter-weather.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: WrapperListComponent },
@@ -64,6 +65,7 @@ const appRoutes: Routes = [
     SocialInfoComponent,
     WeatherListComponent,
     WrapperWeatherComponent,
+    FilterWeatherPipe,
   ],
   imports: [
     FormsModule,
@@ -100,6 +102,7 @@ const appRoutes: Routes = [
     SocialInfoComponent,
     WeatherListComponent,
     WrapperWeatherComponent,
+    FilterWeatherPipe,
   ],
 })
 

@@ -29,7 +29,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 12px 0;
     background-color: $color-list;
     color: $color-light-blue;
     &:hover {
@@ -43,6 +42,12 @@
     background-color: white;
     overflow: scroll;
     height: 215px;
+  }
+
+  &__type-list-link {
+    padding: 20px;
+    display: block;
+    user-select: none;
   }
 
 }

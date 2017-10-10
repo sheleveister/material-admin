@@ -4,14 +4,15 @@ import 'rxjs/add/observable/of';
 
 const dataWeather: Weather[] = [
   {
+    'id': 1,
     'img': 'assets/img/weather-01.jpg',
     'address': 'Westbahnstraße 42, 07',
     'phone': 1285968685,
     'weather': {
       'title': 'Schreiners Essen und Wohnen',
       'icon': 'assets/img/cloudy.png',
-      'water': 25,
-      'temperature': 35
+      'water': 31,
+      'temperature': 25
     },
     'social_info': {
       'title': 'Nam libero voluptatem',
@@ -22,6 +23,7 @@ const dataWeather: Weather[] = [
     'type': 'Hotel'
   },
   {
+    'id': 2,
     'img': 'assets/img/weather-02.jpg',
     'address': 'Philharmoniker-Straße 4, 01',
     'phone': 1385968685,
@@ -29,7 +31,7 @@ const dataWeather: Weather[] = [
       'title': 'Tours Sacher Wien',
       'icon': 'assets/img/cloudy.png',
       'water': 15,
-      'temperature': 21
+      'temperature': 18
     },
     'social_info': {
       'title': 'Tours Sacher Wien',
@@ -40,6 +42,7 @@ const dataWeather: Weather[] = [
     'type': 'Tours'
   },
   {
+    'id': 3,
     'img': 'assets/img/weather-03.jpg',
     'address': 'Mariahilfer Straße 15, 06',
     'phone': 1485968685,
@@ -47,7 +50,7 @@ const dataWeather: Weather[] = [
       'title': 'Fishing Boutiquehotel Das Tyrol',
       'icon': 'assets/img/cloudy.png',
       'water': 32,
-      'temperature': 38
+      'temperature': 28
     },
     'social_info': {
       'title': 'Boutiquehotel Das Tyrol',

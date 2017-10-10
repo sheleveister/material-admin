@@ -11,6 +11,7 @@ type Product = {
 };
 
 type Weather = {
+  id: number,
   img: string,
   address: string,
   phone: number
