@@ -4,29 +4,48 @@
   <sub-menu-navigate [title]="title"></sub-menu-navigate>
 </sub-menu>
 
-<div class="container">
+<div class="container" *ngIf="weather$ | async as weathers;">
 
-  <div class="weather" *ngIf="weather$ | async as weathers;">
+  <div class="weather">
 
-    <img [src]="'assets/img/weather-01.jpg'" alt="" class="weather__img">
+    <img *ngFor="let weather of weathers | weatherFilter:weatherId"
+         [src]="weather.img"
+         class="weather__img">
+
     <div class="weather__type">
       <ul class="weather__type-list">
-        <li *ngFor="let weather of weathers">{{weather.type}}</li>
+
+        <li *ngFor="let weather of weathers"
+            (click)="getWeatherType($event.target.innerText)"
+            class="weather__type-list-link">
+          {{weather.type}}
+        </li>
+
+        <li (click)="getWeatherType($event.target.innerText)"
+            class="weather__type-list-link">
+          All
+        </li>
+
       </ul>
     </div>
 
     <div class="weather-list">
-      <weather-list *ngFor="let weather of weathers"
+      <weather-list *ngFor="let weather of weathers | weatherFilter:mariahilfer"
                     [weather]="weather">
       </weather-list>
     </div>
 
   </div>
 
-  <div class="container-info">
-    <weather-widget></weather-widget>
-    <social-info></social-info>
-  </div>
+  <div class="container-info" *ngFor="let weather of weathers | weatherFilter:weatherId">
 
+      <weather-widget
+        [temperature]="weather.weather.temperature"
+        [water]="weather.weather.water">
+      </weather-widget>
+
+    <social-info [weather]="weather"></social-info>
+
+  </div>
 
 </div>

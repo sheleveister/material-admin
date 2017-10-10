@@ -1,3 +1,21 @@
 <div class="social-info">
-  social-info works!
+
+  <span class="social-info__title"> Nam libero voluptatem </span>
+
+  <div class="social-info__img">
+    <img [src]="weather.img" class="social-info__img-picture">
+  </div>
+
+  <div class="social-count">
+
+    <div class="social-count__followers">
+      {{ weather.social_info.followers + ' Followers '}}
+    </div>
+
+    <div class="social-count__followers">
+      {{ weather.social_info.following + ' Following '}}
+    </div>
+
+  </div>
+
 </div>

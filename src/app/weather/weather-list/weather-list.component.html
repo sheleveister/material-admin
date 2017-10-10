@@ -1,19 +1,15 @@
 <div class="weather-block">
 
-  <div class="weather-block__address">
-    {{weather.address}}
+  <div class="weather-contacts">
+
+    <div class="weather-contacts__address"> {{ weather.address }} </div>
+    <div class="weather-contacts__phone"> {{ '+' + weather.phone }} </div>
+    <div class="weather-contacts__title"> {{ weather.weather.title }} </div>
+
   </div>
 
-  <div class="weather-block__phone">
-    {{ weather.phone }}
+  <div class="weather-block__img">
+    <img [src]="weather.img" class="weather-block__img-picture">
   </div>
-
-  <div class="weather-block__title">
-    {{ weather.weather.title }}
-  </div>
-
 
 </div>
-
-
-

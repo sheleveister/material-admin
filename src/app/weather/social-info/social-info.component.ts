@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'social-info',
   templateUrl: './social-info.component.html',
   styleUrls: ['./social-info.component.scss']
 })
-export class SocialInfoComponent implements OnInit {
+export class SocialInfoComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() public weather: Weather;
 
 }
